@@ -52,8 +52,8 @@ app.use((req, res, next) => {
   }
 
   const { method } = req; // Сохраняем тип запроса (HTTP-метод) в соответствующую переменную
-  const DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE"; // Значение для заголовка Access-Control-Allow-Methods по умолчанию (разрешены все типы запросов)
   const requestHeaders = req.headers["access-control-request-headers"]; // сохраняем список заголовков исходного запроса
+  const DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE"; // Значение для заголовка Access-Control-Allow-Methods по умолчанию (разрешены все типы запросов)
 
   // Если это предварительный запрос, добавляем нужные заголовки
   if (method === "OPTIONS") {

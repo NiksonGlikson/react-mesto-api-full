@@ -6,7 +6,7 @@ const ValidationError = require("../errors/ValidationError");
 const ConflictErrors = require("../errors/ConflictErrors");
 require("dotenv").config();
 
-const { JWT_SECRET_KEY } = process.env;
+const { JWT_SECRET_KEY = "test" } = process.env;
 
 module.exports.createUser = (req, res, next) => {
   const {
