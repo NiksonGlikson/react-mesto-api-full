@@ -1,10 +1,10 @@
+require("dotenv").config();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const NotFoundError = require("../errors/NotFoundError");
 const ValidationError = require("../errors/ValidationError");
 const ConflictErrors = require("../errors/ConflictErrors");
-require("dotenv").config();
 
 const { JWT_SECRET_KEY = "test" } = process.env;
 
@@ -95,6 +95,7 @@ module.exports.login = (req, res, next) => {
       res.cookie("jwt", token, {
         maxAge: 3600000,
         httpOnly: true,
+        secure: true,
         sameSite: true,
       });
       res.send({ token });
@@ -109,7 +110,7 @@ module.exports.getMe = (req, res, next) => {
       if (!user) {
         next(new NotFoundError("Указанный пользователь не найден"));
       }
-      return res.send(user);
+      return res.send(...user);
     })
     .catch(next);
 };

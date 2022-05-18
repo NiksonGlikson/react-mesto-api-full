@@ -1,7 +1,5 @@
 const express = require("express");
 
-const helmet = require("helmet");
-
 const mongoose = require("mongoose");
 
 const bodyParser = require("body-parser");
@@ -19,7 +17,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(helmet());
 
 mongoose.connect("mongodb://localhost:27017/mestodb", {
   useNewUrlParser: true,
@@ -43,12 +40,12 @@ const allowedCors = [
   "http://domainname.glinkin.nomoredomains.xyz",
 ];
 
-app.use((req, res, next) => {
-  const { origin } = req.headers; // Сохраняем источник запроса в переменную origin
-  // проверяем, что источник запроса есть среди разрешённых
+// eslint-disable-next-line prefer-arrow-callback
+app.use(function (req, res, next) {
+  const { origin } = req.headers;
   if (allowedCors.includes(origin)) {
-    res.header("Access-Control-Allow-Origin", "origin");
-    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Origin", origin);
+    res.header("Access-Control-Allow-Credentials", true);
   }
 
   const { method } = req; // Сохраняем тип запроса (HTTP-метод) в соответствующую переменную
