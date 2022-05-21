@@ -37,6 +37,8 @@ const allowedCors = [
   "https://127.0.0.1:3000",
   "https://domainname.glinkin.nomoredomains.xyz",
   "http://domainname.glinkin.nomoredomains.xyz",
+  "http://api.domainname.glinkin.nomoreparties.sbs",
+  "https://api.domainname.glinkin.nomoreparties.sbs"
 ];
 
 // eslint-disable-next-line prefer-arrow-callback
