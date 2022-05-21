@@ -33,8 +33,6 @@ const allowedCors = [
   "localhost:3000",
   "http://localhost:3000",
   "https://localhost:3000",
-  "https://127.0.0.1:3000",
-  "https://127.0.0.1:3000",
   "https://domainname.glinkin.nomoredomains.xyz",
   "http://domainname.glinkin.nomoredomains.xyz",
   "http://api.domainname.glinkin.nomoreparties.sbs",
