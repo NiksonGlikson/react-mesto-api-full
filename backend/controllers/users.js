@@ -95,8 +95,8 @@ module.exports.login = (req, res, next) => {
       res.cookie("jwt", token, {
         maxAge: 3600000,
         httpOnly: true,
+        secure: true,
         sameSite: "None",
-        secure: true
       });
       res.send({ token });
     })
@@ -110,7 +110,7 @@ module.exports.getMe = (req, res, next) => {
       if (!user) {
         next(new NotFoundError("Указанный пользователь не найден"));
       }
-      return res.send(user);
+      return res.send(...user);
     })
     .catch(next);
 };
