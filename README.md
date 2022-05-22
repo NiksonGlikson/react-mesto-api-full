@@ -1,27 +1,23 @@
-[![Tests](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-13-sprint.yml) [![Tests](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-14-sprint.yml)
-# Проект Mesto фронтенд + бэкенд
+# **MESTO
 
+Проект Mesto - это интерактивная страница на которой вы можете пройти регистрациию с последующей авторизацией и насладиться возможностями редактирования профиля пользователя, загрузки карточек с картинками, постановкой и снятием лайков.
 
+# В проекте использованы следующие технологии->
 
-## Настройка бейджей статуса тестов
-Перед началом работы над проектом рекомендуется исправить бейджи, отражающие статус прохождения тестов.
-Для этого замените разметку бейджей на следующий фрагмент, подставив вместо `${имя_пользователя}` и `${имя_репозитория}` соответствующие значения.
+Фронтенд проекта:
+1. Вёрстка согласно принципам БЭМ
+2. Адаптивная вёрстка
+3. Технологии GRID и FLEXBOX
+4. Весь проект построен по принципам ООП
 
-```
-[![Tests for sprint 13](https://github.com/${NiksonGlikson}/${express-mesto-gha}/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/${NiksonGlikson}/${express-mesto-gha}/actions/workflows/tests-13-sprint.yml) 
+Бэкенд проекта :
+1. NodeJS
+2. Express
+3. MongoDB
+4. Nginx
 
-[![Tests for sprint 14](https://github.com/${NiksonGlikson}/${express-mesto-gha}/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/${NiksonGlikson}/${express-mesto-gha}/actions/workflows/tests-14-sprint.yml)
-```
+# Адрес публичного IP - 51.250.74.127
 
-## Директории
+Сайт - https://domainname.glinkin.nomoredomains.xyz
 
-`/routes` — папка с файлами роутера  
-`/controllers` — папка с файлами контроллеров пользователя и карточки   
-`/models` — папка с файлами описания схем пользователя и карточки  
-  
-Остальные директории вспомогательные, создаются при необходимости разработчиком
-
-## Запуск проекта
-
-`npm run start` — запускает сервер   
-`npm run dev` — запускает сервер с hot-reload
+API - https://api.domainname.glinkin.nomoreparties.sbs
