@@ -6,7 +6,7 @@ const NotFoundError = require("../errors/NotFoundError");
 const ValidationError = require("../errors/ValidationError");
 const ConflictErrors = require("../errors/ConflictErrors");
 
-const { JWT_SECRET_KEY = "test" } = process.env;
+const { JWT_SECRET_KEY } = process.env;
 
 module.exports.createUser = (req, res, next) => {
   const {
